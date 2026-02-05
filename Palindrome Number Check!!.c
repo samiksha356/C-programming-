@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int num;
+    scanf("%d", &num);
+    if(num>=0 && num<=9)
+        printf("%d", num);
+    else{
+        int original = num;
+        int rev = 0;
+        while(num!=0){
+            int rem=num%10;
+            rev = rev*10+rem;
+            num=num/10;
+        }
+        if(original==rev)
+            printf("Palindrome");
+        else 
+            printf("Not Palindrome");
+    }
+    return 0;
+}
